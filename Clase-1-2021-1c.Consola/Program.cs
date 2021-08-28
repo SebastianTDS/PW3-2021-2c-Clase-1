@@ -7,8 +7,23 @@ namespace Clase_1_2021_1c.Consola
     {
         static void Main(string[] args)
         {
-            EjercicioBola8Magica();
+            //EjercicioBola8Magica();
             //EjericicioCalculadora();
+            EjercicioCalculoIMC();
+        }
+
+        private static void EjercicioCalculoIMC()
+        {
+            Console.WriteLine("Calculod de Indice de Masa Corporal (IMC) \n");
+
+            Console.WriteLine("Indique su peso:");
+            double peso = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Indique su altura:");
+            double altura = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Su condición es: " + Formulas.calcularIMC(altura, peso, out double IMC) 
+                                + " para un indice de " + Math.Round(IMC, 2));
         }
 
         private static void EjercicioBola8Magica()
